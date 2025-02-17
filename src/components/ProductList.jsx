@@ -3,10 +3,10 @@ import React from 'react';
 const ProductList = ({ products }) => {
 
   React.useEffect(() => {
-    console.log("PRODUCTS products", products);
+    console.log("PRODUCTS products", products.results);
   }, [products])
   return (
-    <div>
+    <div className='grid grid-cols-3'>
       {products.map((product) => (
         <div className="product-card" style={styles.card} key={product.asin}>
           <img src={product.imgUrl} alt={product.title} style={styles.image} />
